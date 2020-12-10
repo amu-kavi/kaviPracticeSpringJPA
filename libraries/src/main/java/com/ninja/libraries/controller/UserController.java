@@ -28,7 +28,7 @@ public class UserController {
 	
 	@GetMapping(value="/{id}")
 	public Users findbyUserId(@PathVariable final String id) {
-		return new Users();//userJpaRepository.findbyUserId(id);
+		return userJpaRepository.findbyUserId(id);
 	}
 	
 	@PostMapping(value ="/load")
